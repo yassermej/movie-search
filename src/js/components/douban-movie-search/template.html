@@ -1,0 +1,16 @@
+<div>
+  <div class="col-md-12">
+    <div v-for="subject in result.subjects" class="row movie">
+      <img v-bind:src="subject.images.large"/ class="col-md-4">
+      <div class="col-md-4">
+      <a href="{{ subject.alt }}" class="col-md-12">
+        {{ subject.original_title }}
+      </a>
+      <p class="col-md-12">{{ subject.year }}</p>
+      <div class="col-md-12" v-for="actor in subject.casts">
+        <a href="{{ actor.alt }}">{{ actor.name }}</a>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
